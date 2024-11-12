@@ -1,0 +1,146 @@
+.site-confirm-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+  padding: 2rem;
+}
+
+.confirm-container {
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  animation: fadeIn 0.3s ease;
+}
+
+.confirm-content {
+  padding: 2.5rem;
+}
+
+.confirm-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.confirm-site-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+}
+
+.confirm-header h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.confirm-body {
+  margin-bottom: 2.5rem;
+}
+
+.confirm-description {
+  color: var(--text-secondary);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.confirm-url {
+  background-color: var(--background-color);
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+}
+
+.url-label {
+  display: block;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.url-text {
+  color: var(--primary-color);
+  font-size: 1.125rem;
+  font-weight: 500;
+  word-break: break-all;
+}
+
+.confirm-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.confirm-btn {
+  padding: 0.875rem 2rem;
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.confirm-btn.cancel {
+  background-color: var(--background-color);
+  color: var(--text-secondary);
+  border: none;
+}
+
+.confirm-btn.cancel:hover {
+  background-color: #e2e8f0;
+}
+
+.confirm-btn.confirm {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+}
+
+.confirm-btn.confirm:hover {
+  background-color: var(--primary-hover);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .site-confirm-page {
+    padding: 1rem;
+  }
+
+  .confirm-content {
+    padding: 1.5rem;
+  }
+
+  .confirm-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .confirm-footer {
+    flex-direction: column;
+  }
+
+  .confirm-btn {
+    width: 100%;
+  }
+} 

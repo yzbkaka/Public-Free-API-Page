@@ -1,43 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <meta name="theme-color" content="#2563eb" />
+    
+    <!-- 基础 SEO Meta Tags -->
+    <title>WebNav - 优质网站导航平台</title>
+    <meta name="description" content="WebNav是一个精选优质网站的导航平台，为用户提供分类清晰、内容丰富的网站导航服务。包含开发工具、设计资源、学习平台等多个分类。" />
+    <meta name="keywords" content="网站导航,WebNav,网址导航,开发工具,设计资源,学习平台,工具软件,社交媒体,娱乐休闲,生活服务" />
+    <meta name="author" content="WebNav Team" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- 移动端优化 -->
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://your-domain.com/" />
+    <meta property="og:title" content="WebNav - 优质网站导航平台" />
+    <meta property="og:description" content="发现、收藏、分享优质网站，让网上冲浪更加便捷。" />
+    <meta property="og:image" content="%PUBLIC_URL%/og-image.png" />
+    <meta property="og:site_name" content="WebNav" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:locale:alternate" content="en_US" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@webnav" />
+    <meta name="twitter:creator" content="@webnav" />
+    <meta name="twitter:title" content="WebNav - 优质网站导航平台" />
+    <meta name="twitter:description" content="发现、收藏、分享优质网站，让网上冲浪更加便捷。" />
+    <meta name="twitter:image" content="%PUBLIC_URL%/og-image.png" />
+    
+    <!-- 结构化数据 - Organization -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "WebNav",
+        "url": "https://your-domain.com",
+        "logo": "https://your-domain.com/logo.png",
+        "sameAs": [
+          "https://twitter.com/webnav",
+          "https://facebook.com/webnav",
+          "https://linkedin.com/company/webnav"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+86-xxx-xxxx-xxxx",
+          "contactType": "customer service",
+          "availableLanguage": ["Chinese", "English"]
+        }
+      }
+    </script>
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <!-- 结构化数据 - WebSite -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "WebNav",
+        "url": "https://your-domain.com",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://your-domain.com/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+
+    <!-- 结构化数据 - BreadcrumbList -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://your-domain.com"
+        }]
+      }
+    </script>
+    
+    <!-- DNS 预解析 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://api.your-domain.com" />
+    
+    <!-- 预加载关键资源 -->
+    <link rel="preload" href="%PUBLIC_URL%/logo.png" as="image" />
+    <link rel="preload" href="%PUBLIC_URL%/fonts/custom-font.woff2" as="font" type="font/woff2" crossorigin />
+    
+    <!-- 替代内容链接 -->
+    <link rel="alternate" href="https://your-domain.com" hreflang="x-default" />
+    <link rel="alternate" href="https://your-domain.com/en" hreflang="en" />
+    <link rel="alternate" href="https://your-domain.com/zh" hreflang="zh" />
+    <link rel="alternate" href="https://your-domain.com/ja" hreflang="ja" />
+    
+    <!-- PWA 支持 -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon-16x16.png" />
+    <link rel="mask-icon" href="%PUBLIC_URL%/safari-pinned-tab.svg" color="#2563eb" />
+    
+    <!-- 字体优化 -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>
+      <h1>WebNav - 优质网站导航平台</h1>
+      <p>WebNav是一个精选优质网站的导航平台，为用户提供分类清晰、内容丰富的网站导航服务。请启用 JavaScript 以获得最佳体验。</p>
+    </noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>
