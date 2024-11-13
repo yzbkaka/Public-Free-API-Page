@@ -1,104 +1,100 @@
-.drawer-overlay {
+.language-drawer-overlay {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1100;
+  z-index: 1000;
   backdrop-filter: blur(4px);
 }
 
 .language-drawer {
   position: fixed;
   top: 0;
-  right: -320px;
-  width: 320px;
-  height: 100vh;
-  background-color: white;
-  box-shadow: var(--shadow-lg);
-  z-index: 1200;
-  transition: right 0.3s ease;
-  display: flex;
-  flex-direction: column;
-}
-
-.language-drawer.open {
   right: 0;
+  width: 320px;
+  height: 100%;
+  background: white;
+  z-index: 1001;
+  box-shadow: -4px 0 25px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.3s ease;
 }
 
-.drawer-header {
-  padding: 1.5rem;
-  border-bottom: 1px solid var(--border-color);
+.language-drawer-header {
+  padding: 20px;
+  border-bottom: 1px solid #e2e8f0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.drawer-header h3 {
+.language-drawer-header h2 {
+  margin: 0;
   font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--text-primary);
+  color: #1e293b;
 }
 
-.close-btn {
+.close-button {
   background: none;
   border: none;
   font-size: 1.5rem;
-  color: var(--text-secondary);
+  color: #64748b;
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 4px;
   line-height: 1;
 }
 
-.drawer-content {
-  flex: 1;
+.language-list {
+  padding: 12px;
   overflow-y: auto;
-  padding: 1rem;
+  height: calc(100% - 70px);
 }
 
-.lang-item {
-  padding: 1rem;
-  border-radius: var(--radius-md);
-  cursor: pointer;
+.language-item {
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  background: none;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  border-radius: 8px;
   transition: all 0.2s ease;
+  color: #1e293b;
+  font-size: 1rem;
 }
 
-.lang-item:hover {
-  background-color: var(--background-color);
+.language-item:hover {
+  background: #f8fafc;
 }
 
-.lang-item.active {
-  background-color: rgba(37, 99, 235, 0.1);
+.language-item.active {
+  background: #eff6ff;
+  color: #2563eb;
 }
 
-.lang-info {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.lang-name {
+.language-name {
   font-weight: 500;
-  color: var(--text-primary);
-}
-
-.lang-users {
-  font-size: 0.875rem;
-  color: var(--text-secondary);
 }
 
 .check-icon {
-  color: var(--primary-color);
+  color: #2563eb;
   font-weight: bold;
 }
 
-@media (max-width: 768px) {
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 640px) {
   .language-drawer {
     width: 100%;
-    right: -100%;
   }
 } 

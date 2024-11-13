@@ -225,7 +225,7 @@ function HomePage() {
     const scrollHeight = document.documentElement.scrollHeight;
     const clientHeight = document.documentElement.clientHeight;
     
-    // 当距离底部100px时触发加载
+    // 当距离底部100px时触发加���
     if (scrollHeight - scrollTop - clientHeight < 100) {
       loadMoreSites();
     }

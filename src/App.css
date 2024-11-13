@@ -76,11 +76,7 @@ body {
 }
 
 .search-container {
-  width: 300px;
-  max-width: 100%;
-  position: static;
-  transform: none;
-  margin: 0;
+  display: none;
 }
 
 .search-bar {
