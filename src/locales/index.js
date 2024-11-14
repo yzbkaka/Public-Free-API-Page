@@ -13,7 +13,13 @@ export const translations = {
       noMore: 'No more items',
       totalSites: 'Total {count} APIs',
       allSites: 'All APIs',
-      categoryTitle: 'Categories'
+      categoryTitle: 'Categories',
+      url: 'URL',
+      cancel: 'Cancel',
+      confirm: 'Confirm',
+      searchResults: 'Search Results',
+      searchResultsCount: 'Found {count} results',
+      noSearchResults: 'No matching results found'
     },
     footer: {
       about: 'About',
@@ -43,7 +49,13 @@ export const translations = {
       noMore: '没有更多内容',
       totalSites: '共 {count} 个API',
       allSites: '全部API',
-      categoryTitle: '分类导航'
+      categoryTitle: '分类导航',
+      url: '网址',
+      cancel: '取消',
+      confirm: '确认',
+      searchResults: '搜索结果',
+      searchResultsCount: '找到 {count} 个结果',
+      noSearchResults: '未找到匹配的结果'
     },
     footer: {
       about: '关于我们',
@@ -73,7 +85,13 @@ export const translations = {
       noMore: 'لا مزيد من العناصر',
       totalSites: 'إجمالي {count} APIs',
       allSites: 'جميع APIs',
-      categoryTitle: 'الفئات'
+      categoryTitle: 'الفئات',
+      url: 'الرابط',
+      cancel: 'إلغاء',
+      confirm: 'تأكيد',
+      searchResults: 'نتائج البحث',
+      searchResultsCount: 'تم العثور على {count} نتيجة',
+      noSearchResults: 'لم يتم العثور على نتائج مطابقة'
     },
     footer: {
       about: 'حول',
@@ -103,7 +121,13 @@ export const translations = {
       noMore: 'Keine weiteren Einträge',
       totalSites: 'Insgesamt {count} APIs',
       allSites: 'Alle APIs',
-      categoryTitle: 'Kategorien'
+      categoryTitle: 'Kategorien',
+      url: 'URL',
+      cancel: 'Abbrechen',
+      confirm: 'Bestätigen',
+      searchResults: 'Suchergebnisse',
+      searchResultsCount: 'Gefunden {count} Ergebnisse',
+      noSearchResults: 'Keine übereinstimmenden Ergebnisse gefunden'
     },
     footer: {
       about: 'Über uns',
@@ -133,7 +157,13 @@ export const translations = {
       noMore: 'No hay más elementos',
       totalSites: 'Total {count} APIs',
       allSites: 'Todas las APIs',
-      categoryTitle: 'Categorías'
+      categoryTitle: 'Categorías',
+      url: 'URL',
+      cancel: 'Cancelar',
+      confirm: 'Confirmar',
+      searchResults: 'Resultados de búsqueda',
+      searchResultsCount: 'Se encontraron {count} resultados',
+      noSearchResults: 'No se encontraron resultados coincidentes'
     },
     footer: {
       about: 'Acerca de',
@@ -163,7 +193,13 @@ export const translations = {
       noMore: 'Plus d\'éléments',
       totalSites: 'Total de {count} APIs',
       allSites: 'Toutes les APIs',
-      categoryTitle: 'Catégories'
+      categoryTitle: 'Catégories',
+      url: 'URL',
+      cancel: 'Annuler',
+      confirm: 'Confirmer',
+      searchResults: 'Résultats de recherche',
+      searchResultsCount: 'Trouvé {count} résultats',
+      noSearchResults: 'Aucun résultat correspondant trouvé'
     },
     footer: {
       about: 'À propos',
@@ -193,7 +229,13 @@ export const translations = {
       noMore: 'これ以上のアイテムはありません',
       totalSites: '合計 {count} のAPI',
       allSites: 'すべてのAPI',
-      categoryTitle: 'カテゴリー'
+      categoryTitle: 'カテゴリー',
+      url: 'URL',
+      cancel: 'キャンセル',
+      confirm: '確認',
+      searchResults: '検索結果',
+      searchResultsCount: '見つかった {count} 件',
+      noSearchResults: '一致する結果が見つかりません'
     },
     footer: {
       about: '私たちについて',
@@ -223,7 +265,13 @@ export const translations = {
       noMore: '더 이상 항목이 없습니다',
       totalSites: '총 {count}개의 API',
       allSites: '모든 API',
-      categoryTitle: '카테고리'
+      categoryTitle: '카테고리',
+      url: 'URL',
+      cancel: '취소',
+      confirm: '확인',
+      searchResults: '검색 결과',
+      searchResultsCount: '총 {count}개의 결과',
+      noSearchResults: '일치하는 결과를 찾을 수 없습니다'
     },
     footer: {
       about: '소개',
@@ -253,7 +301,13 @@ export const translations = {
       noMore: 'Não há mais itens',
       totalSites: 'Total de {count} APIs',
       allSites: 'Todas as APIs',
-      categoryTitle: 'Categorias'
+      categoryTitle: 'Categorias',
+      url: 'URL',
+      cancel: 'Cancelar',
+      confirm: 'Confirmar',
+      searchResults: 'Resultados da pesquisa',
+      searchResultsCount: 'Encontrado {count} resultados',
+      noSearchResults: 'Nenhum resultado correspondente encontrado'
     },
     footer: {
       about: 'Sobre',
@@ -283,7 +337,13 @@ export const translations = {
       noMore: 'Больше нет элементов',
       totalSites: 'Всего {count} API',
       allSites: 'Все API',
-      categoryTitle: 'Категории'
+      categoryTitle: 'Категории',
+      url: 'URL',
+      cancel: 'Отмена',
+      confirm: 'Подтвердить',
+      searchResults: 'Результаты поиска',
+      searchResultsCount: 'Найдено {count} результатов',
+      noSearchResults: 'Совпадения не найдены'
     },
     footer: {
       about: 'О нас',

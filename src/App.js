@@ -31,6 +31,10 @@ function HomePage() {
   const [currentLang, setCurrentLang] = useState('en');
   const [isLangDrawerOpen, setIsLangDrawerOpen] = useState(false);
   const [apiData, setApiData] = useState([]);
+  const [isConfirmOpen, setIsConfirmOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
+  const [isSearching, setIsSearching] = useState(false);
 
   // 在 HomePage 组件中添加翻译获取
   const t = translations[currentLang] || translations['en'];
@@ -225,7 +229,7 @@ function HomePage() {
     const scrollHeight = document.documentElement.scrollHeight;
     const clientHeight = document.documentElement.clientHeight;
     
-    // 当距离底部100px时触发加���
+    // 当距离底部100px时触发加载
     if (scrollHeight - scrollTop - clientHeight < 100) {
       loadMoreSites();
     }
@@ -286,6 +290,51 @@ function HomePage() {
     return colors[index];
   }
 
+  const handleSiteClick = (site) => {
+    setSelectedSite(site);
+    setIsConfirmOpen(true);
+  };
+
+  const handleConfirm = (site) => {
+    if (site && site.url) {
+      window.open(site.url, '_blank', 'noopener,noreferrer');
+    }
+  };
+
+  // 搜索处理函数
+  const handleSearch = (event) => {
+    const query = event.target.value;
+    setSearchQuery(query);
+    
+    if (!query.trim()) {
+      setIsSearching(false);
+      setSearchResults([]);
+      return;
+    }
+
+    setIsSearching(true);
+    
+    // 从所有分类中搜索
+    const results = apiData.reduce((acc, category) => {
+      const matchingApis = category.apiList.filter(api => {
+        const searchText = `${api.name} ${api.description} ${api.tags.join(' ')}`.toLowerCase();
+        return searchText.includes(query.toLowerCase());
+      }).map(api => ({
+        id: api.name,
+        title: api.name,
+        description: api.description,
+        imageUrl: getDefaultImage(api.name),
+        category: category.tab,
+        url: api.url,
+        tags: api.tags,
+        auth: api.tags.find(tag => tag.includes('apiKey') || tag.includes('OAuth')) || 'No Auth'
+      }));
+      return [...acc, ...matchingApis];
+    }, []);
+
+    setSearchResults(results);
+  };
+
   return (
     <div className="app">
       {/* 顶部导航 */}
@@ -298,7 +347,12 @@ function HomePage() {
           <div className="search-container">
             <div className="search-bar">
               <i className="search-icon">🔍</i>
-              <input type="text" placeholder={t.nav.search} />
+              <input 
+                type="text" 
+                placeholder={t.nav.search}
+                value={searchQuery}
+                onChange={handleSearch}
+              />
             </div>
           </div>
           <div className="lang-switch">
@@ -346,58 +400,124 @@ function HomePage() {
 
         {/* 主要内容区 */}
         <main className="content">
-          {selectedCategory && (
-            <div className="content-header">
-              <h1>{selectedCategory || t.content.allSites}</h1>
-              <div className="content-meta">
-                {t.content.totalSites.replace('{count}', sites.length)}
+          {!isSearching ? (
+            // 原有的分类内容显示
+            <>
+              {selectedCategory && (
+                <div className="content-header">
+                  <h1>{selectedCategory || t.content.allSites}</h1>
+                  <div className="content-meta">
+                    {t.content.totalSites.replace('{count}', sites.length)}
+                  </div>
+                </div>
+              )}
+              
+              <div className="waterfall">
+                {sites.map(site => (
+                  <div key={site.id} className="site-card">
+                    <div className="site-card-header">
+                      <img 
+                        className="site-icon" 
+                        src={site.imageUrl} 
+                        alt={site.title}
+                      />
+                      <div className="site-info">
+                        <h3>{site.title}</h3>
+                      </div>
+                    </div>
+                    <p className="site-description">{site.description}</p>
+                    {site.tags && (
+                      <div className="site-tags">
+                        {site.tags.map((tag, index) => {
+                          const tagColor = getTagColor(tag);
+                          return (
+                            <span 
+                              key={index} 
+                              className="site-tag"
+                              style={{
+                                backgroundColor: tagColor.bg,
+                                color: tagColor.text
+                              }}
+                            >
+                              <span className="site-tag-icon" style={{ color: tagColor.text }}>#</span>
+                              {tag}
+                            </span>
+                          );
+                        })}
+                      </div>
+                    )}
+                    <div className="card-actions">
+                      <button className="visit-btn" onClick={() => handleVisitClick(site)}>
+                        <span>{t.content.visitSite}</span>
+                        <span className="btn-icon">→</span>
+                      </button>
+                    </div>
+                  </div>
+                ))}
               </div>
-            </div>
+            </>
+          ) : (
+            // 搜索结果显示
+            <>
+              <div className="content-header">
+                <h1>{t.content.searchResults}</h1>
+                <div className="content-meta">
+                  {t.content.searchResultsCount.replace('{count}', searchResults.length)}
+                </div>
+              </div>
+              
+              <div className="waterfall">
+                {searchResults.map(site => (
+                  <div key={site.id} className="site-card">
+                    <div className="site-card-header">
+                      <img 
+                        className="site-icon" 
+                        src={site.imageUrl} 
+                        alt={site.title}
+                      />
+                      <div className="site-info">
+                        <h3>{site.title}</h3>
+                      </div>
+                    </div>
+                    <p className="site-description">{site.description}</p>
+                    {site.tags && (
+                      <div className="site-tags">
+                        {site.tags.map((tag, index) => {
+                          const tagColor = getTagColor(tag);
+                          return (
+                            <span 
+                              key={index} 
+                              className="site-tag"
+                              style={{
+                                backgroundColor: tagColor.bg,
+                                color: tagColor.text
+                              }}
+                            >
+                              <span className="site-tag-icon" style={{ color: tagColor.text }}>#</span>
+                              {tag}
+                            </span>
+                          );
+                        })}
+                      </div>
+                    )}
+                    <div className="card-actions">
+                      <button className="visit-btn" onClick={() => handleVisitClick(site)}>
+                        <span>{t.content.visitSite}</span>
+                        <span className="btn-icon">→</span>
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              
+              {searchResults.length === 0 && (
+                <div className="no-results">
+                  <span className="no-results-icon">🔍</span>
+                  <p>{t.content.noSearchResults}</p>
+                </div>
+              )}
+            </>
           )}
-          
-          <div className="waterfall">
-            {sites.map(site => (
-              <div key={site.id} className="site-card">
-                <div className="site-card-header">
-                  <img 
-                    className="site-icon" 
-                    src={site.imageUrl} 
-                    alt={site.title}
-                  />
-                  <div className="site-info">
-                    <h3>{site.title}</h3>
-                  </div>
-                </div>
-                <p className="site-description">{site.description}</p>
-                {site.tags && (
-                  <div className="site-tags">
-                    {site.tags.map((tag, index) => {
-                      const tagColor = getTagColor(tag);
-                      return (
-                        <span 
-                          key={index} 
-                          className="site-tag"
-                          style={{
-                            backgroundColor: tagColor.bg,
-                            color: tagColor.text
-                          }}
-                        >
-                          <span className="site-tag-icon" style={{ color: tagColor.text }}>#</span>
-                          {tag}
-                        </span>
-                      );
-                    })}
-                  </div>
-                )}
-                <div className="card-actions">
-                  <button className="visit-btn" onClick={() => handleVisitClick(site)}>
-                    <span>{t.content.visitSite}</span>
-                    <span className="btn-icon">→</span>
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
           
           {sites.length === 0 && !loading && (
             <div className="no-results">
@@ -446,6 +566,14 @@ function HomePage() {
         onClose={() => setIsLangDrawerOpen(false)}
         currentLang={currentLang}
         onSelectLang={handleLanguageChange}
+      />
+
+      <SiteConfirm
+        site={selectedSite}
+        isOpen={isConfirmOpen}
+        onClose={() => setIsConfirmOpen(false)}
+        onConfirm={handleConfirm}
+        t={t}
       />
     </div>
   );
