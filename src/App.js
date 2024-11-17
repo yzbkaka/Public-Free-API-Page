@@ -24,7 +24,7 @@ function HomePage() {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
-  const ITEMS_PER_PAGE = 6;
+  const ITEMS_PER_PAGE = 9;
   const [selectedSite, setSelectedSite] = useState(null);
   const navigate = useNavigate();
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
@@ -94,13 +94,15 @@ function HomePage() {
       });
   };
 
-  // 添加一个新的函数来加载分类数据
+  // 修改 loadNewCategoryData 函数
   const loadNewCategoryData = (data, category) => {
     const selectedTabData = category
       ? data.find(item => item.tab === category)?.apiList || []
       : data.flatMap(item => item.apiList);
 
-    const newSites = selectedTabData.slice(0, ITEMS_PER_PAGE).map(api => ({
+    // 确保首次加载至少9个卡片
+    const initialLoadCount = Math.max(ITEMS_PER_PAGE, 9);
+    const newSites = selectedTabData.slice(0, initialLoadCount).map(api => ({
       id: api.name,
       title: api.name,
       description: api.description,
@@ -112,7 +114,7 @@ function HomePage() {
     }));
     
     setSites(newSites);
-    setHasMore(selectedTabData.length > ITEMS_PER_PAGE);
+    setHasMore(selectedTabData.length > initialLoadCount);
   };
 
   // 修改自动检测语言的函数
