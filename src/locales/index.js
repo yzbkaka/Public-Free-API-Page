@@ -101,10 +101,10 @@ export const translations = {
       copyright: '© 2024 WebNav. جميع الحقوق محفوظة.'
     },
     meta: {
-      titleTemplate: '{category} - WebNav منصة API',
-      defaultTitle: 'WebNav - منصة تصفح API عالية الجودة',
-      descriptionTemplate: 'اكتشف توصيات API عالية الجودة في فئة {category}، بما في ذلك {count} API مختارة.',
-      defaultDescription: 'WebNav هي منصة تصفح API منسقة توفر تصنيفًا واضحًا ومحتوى غنيًا للمستخدمين.'
+      titleTemplate: '{category} APIs - دليل APIs المجانية العامة | WebNav',
+      defaultTitle: 'WebNav - دليل APIs المجانية العامة ومنصة التصفح',
+      descriptionTemplate: 'اكتشف {count} API مجانية في {category}. ابحث وادمج API المثالية لمشروعك القادم من دليلنا الشامل.',
+      defaultDescription: 'WebNav هو أكبر دليل للـ APIs المجانية العامة. اكتشف واختبر وادمج الآلاف من APIs بما في ذلك REST APIs و Web APIs و HTTP APIs والمزيد.'
     }
   },
   'de': {
@@ -137,10 +137,10 @@ export const translations = {
       copyright: '© 2024 WebNav. Alle Rechte vorbehalten.'
     },
     meta: {
-      titleTemplate: '{category} - WebNav API-Navigation',
-      defaultTitle: 'WebNav - Qualitäts-API-Navigationsplattform',
-      descriptionTemplate: 'Entdecken Sie qualitativ hochwertige API-Empfehlungen in der Kategorie {category}, einschließlich {count} ausgewählter APIs.',
-      defaultDescription: 'WebNav ist eine kuratierte API-Navigationsplattform mit klarer Kategorisierung und reichhaltigem Inhalt für Benutzer.'
+      titleTemplate: '{category} APIs - Kostenloses Public API Verzeichnis | WebNav',
+      defaultTitle: 'WebNav - Kostenloses Public API Verzeichnis & Navigationsplattform',
+      descriptionTemplate: 'Entdecken Sie {count} kostenlose öffentliche APIs in {category}. Finden und integrieren Sie die perfekte API für Ihr nächstes Projekt aus unserem umfassenden API-Verzeichnis.',
+      defaultDescription: 'WebNav ist das größte Verzeichnis kostenloser öffentlicher APIs. Entdecken, testen und integrieren Sie Tausende von APIs, einschließlich REST APIs, Web APIs, HTTP APIs und mehr.'
     }
   },
   'es': {
@@ -209,10 +209,10 @@ export const translations = {
       copyright: '© 2024 WebNav. Tous droits réservés.'
     },
     meta: {
-      titleTemplate: '{category} - Navigation API WebNav',
-      defaultTitle: 'WebNav - Plateforme de navigation API de qualité',
-      descriptionTemplate: 'Explorez des recommandations d\'API de qualité dans la catégorie {category}, incluant {count} APIs sélectionnées.',
-      defaultDescription: 'WebNav est une plateforme de navigation API organisée offrant une catégorisation claire et un contenu riche pour les utilisateurs.'
+      titleTemplate: '{category} APIs - Répertoire d\'APIs Publiques Gratuites | WebNav',
+      defaultTitle: 'WebNav - Répertoire d\'APIs Publiques Gratuites & Plateforme de Navigation',
+      descriptionTemplate: 'Explorez {count} APIs publiques gratuites dans {category}. Trouvez et intégrez l\'API parfaite pour votre prochain projet depuis notre répertoire complet.',
+      defaultDescription: 'WebNav est le plus grand répertoire d\'APIs publiques gratuites. Découvrez, testez et intégrez des milliers d\'APIs, y compris REST APIs, Web APIs, HTTP APIs et plus encore.'
     }
   },
   'ja': {
@@ -281,10 +281,10 @@ export const translations = {
       copyright: '© 2024 WebNav. 모든 권리 보유.'
     },
     meta: {
-      titleTemplate: '{category} - WebNav API 네비게이션',
-      defaultTitle: 'WebNav - 고품질 API 네비게이션 플랫폼',
-      descriptionTemplate: '{category} 카테고리에서 {count}개의 선별된 API를 포함한 고품질 API 추천을 탐색하세요.',
-      defaultDescription: 'WebNav는 사용자에게 명확한 분류와 풍부한 콘텐츠를 제공하는 큐레이션된 API 네비게이션 플랫폼입니다.'
+      titleTemplate: '{category} API - 무료 공개 API 디렉토리 | WebNav',
+      defaultTitle: 'WebNav - 무료 공개 API 디렉토리 및 네비게이션 플랫폼',
+      descriptionTemplate: '{category}에서 {count}개의 무료 공개 API를 탐색하세요. 종합 API 디렉토리에서 프로젝트에 완벽한 API를 찾고 통합하세요.',
+      defaultDescription: 'WebNav는 가장 큰 무료 공개 API 디렉토리입니다. REST API, Web API, HTTP API 등 수천 개의 API를 발견하고 테스트하고 통합하세요.'
     }
   },
   'pt': {
@@ -317,10 +317,10 @@ export const translations = {
       copyright: '© 2024 WebNav. Todos os direitos reservados.'
     },
     meta: {
-      titleTemplate: '{category} - Navegação de API WebNav',
-      defaultTitle: 'WebNav - Plataforma de Navegação de API de Qualidade',
-      descriptionTemplate: 'Explore recomendações de API de qualidade na categoria {category}, incluindo {count} APIs selecionadas.',
-      defaultDescription: 'WebNav é uma plataforma curada de navegação de API fornecendo categorização clara e conteúdo rico para usuários.'
+      titleTemplate: '{category} APIs - Diretório de APIs Públicas Gratuitas | WebNav',
+      defaultTitle: 'WebNav - Diretório de APIs Públicas Gratuitas e Plataforma de Navegação',
+      descriptionTemplate: 'Explore {count} APIs públicas gratuitas em {category}. Encontre e integre a API perfeita para seu próximo projeto em nosso diretório abrangente.',
+      defaultDescription: 'WebNav é o maior diretório de APIs públicas gratuitas. Descubra, teste e integre milhares de APIs, incluindo REST APIs, Web APIs, HTTP APIs e muito mais.'
     }
   },
   'ru': {
@@ -353,10 +353,10 @@ export const translations = {
       copyright: '© 2024 WebNav. Все права защищены.'
     },
     meta: {
-      titleTemplate: '{category} - WebNav Навигация по API',
-      defaultTitle: 'WebNav - Качественная платформа навигации по API',
-      descriptionTemplate: 'Исследуйте качественные рекомендации API в категории {category}, включая {count} отобранных API.',
-      defaultDescription: 'WebNav - это курируемая платформа навигации по API, предоставляющая четкую категоризацию и богатый контент для пользователей.'
+      titleTemplate: '{category} API - Каталог бесплатных публичных API | WebNav',
+      defaultTitle: 'WebNav - Каталог бесплатных публичных API и платформа навигации',
+      descriptionTemplate: 'Исследуйте {count} бесплатных публичных API в категории {category}. Найдите и интегрируйте идеальный API для вашего следующего проекта из нашего полного каталога.',
+      defaultDescription: 'WebNav - крупнейший каталог бесплатных публичных API. Откройте, протестируйте и интегрируйте тысячи API, включая REST API, Web API, HTTP API и многое другое.'
     }
   }
 }; 
