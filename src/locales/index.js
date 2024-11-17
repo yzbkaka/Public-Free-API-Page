@@ -29,10 +29,10 @@ export const translations = {
       copyright: '© 2024 WebNav. All rights reserved.'
     },
     meta: {
-      titleTemplate: '{category} - WebNav API Navigation',
-      defaultTitle: 'WebNav - Quality API Navigation Platform',
-      descriptionTemplate: 'Explore quality API recommendations in {category} category, including {count} selected APIs.',
-      defaultDescription: 'WebNav is a curated API navigation platform providing clear categorization and rich content for users.'
+      titleTemplate: '{category} APIs - Free Public API Directory | WebNav',
+      defaultTitle: 'WebNav - Free Public API Directory & API Navigation Platform',
+      descriptionTemplate: 'Explore {count} free public APIs in {category}. Find and integrate the perfect API for your next project from our comprehensive API directory.',
+      defaultDescription: 'WebNav is the largest directory of free public APIs. Discover, test and integrate with thousands of APIs including REST APIs, Web APIs, HTTP APIs and more.'
     }
   },
   'zh': {
@@ -65,10 +65,10 @@ export const translations = {
       copyright: '© 2024 WebNav. 保留所有权利。'
     },
     meta: {
-      titleTemplate: '{category} - WebNav API导航',
-      defaultTitle: 'WebNav - 优质API导航平台',
-      descriptionTemplate: '探索{category}分类下的优质API推荐，包含{count}个精选API。',
-      defaultDescription: 'WebNav是一个精选优质API的导航平台，为用户提供分类清晰、内容丰富的API导航服务。'
+      titleTemplate: '{category} API - 免费公共API目录 | WebNav',
+      defaultTitle: 'WebNav - 免费公共API目录和导航平台',
+      descriptionTemplate: '探索{category}分类下的{count}个免费公共API。从我们全面的API目录中找到并集成适合您项目的完美API。',
+      defaultDescription: 'WebNav是最大的免费公共API目录。发现、测试并集成数千个API，包括REST API、Web API、HTTP API等。'
     }
   },
   'ar': {
@@ -173,10 +173,10 @@ export const translations = {
       copyright: '© 2024 WebNav. Todos los derechos reservados.'
     },
     meta: {
-      titleTemplate: '{category} - Navegación de API WebNav',
-      defaultTitle: 'WebNav - Plataforma de navegación de API de calidad',
-      descriptionTemplate: 'Explore recomendaciones de API de calidad en la categoría {category}, incluyendo {count} APIs seleccionadas.',
-      defaultDescription: 'WebNav es una plataforma curada de navegación de API que proporciona categorización clara y contenido rico para los usuarios.'
+      titleTemplate: '{category} APIs - Directorio de APIs Públicas Gratuitas | WebNav',
+      defaultTitle: 'WebNav - Directorio de APIs Públicas Gratuitas y Plataforma de Navegación',
+      descriptionTemplate: 'Explore {count} APIs públicas gratuitas en {category}. Encuentre e integre la API perfecta para su próximo proyecto de nuestro directorio completo.',
+      defaultDescription: 'WebNav es el directorio más grande de APIs públicas gratuitas. Descubra, pruebe e integre miles de APIs, incluyendo REST APIs, Web APIs, HTTP APIs y más.'
     }
   },
   'fr': {
@@ -245,10 +245,10 @@ export const translations = {
       copyright: '© 2024 WebNav. All rights reserved.'
     },
     meta: {
-      titleTemplate: '{category} - WebNav APIナビゲーション',
-      defaultTitle: 'WebNav - 高品質APIナビゲーションプラットフォーム',
-      descriptionTemplate: '{category}カテゴリーの高品質なAPIレコメンデーションを探索、{count}の厳選されたAPIを含みます。',
-      defaultDescription: 'WebNavは、ユーザーに明確な分類と豊富なコンテンツを提供する、キュレーションされたAPIナビゲーションプラットフォームです。'
+      titleTemplate: '{category} API - 無料パブリックAPIディレクトリ | WebNav',
+      defaultTitle: 'WebNav - 無料パブリックAPIディレクトリ＆ナビゲーションプラットフォーム',
+      descriptionTemplate: '{category}カテゴリーの{count}個の無料パブリックAPIを探索。包括的なAPIディレクトリからプロジェクトに最適なAPIを見つけて統合できます。',
+      defaultDescription: 'WebNavは最大の無料パブリックAPIディレクトリです。REST API、Web API、HTTP APIなど、何千ものAPIを発見、テスト、統合できます。'
     }
   },
   'ko': {
